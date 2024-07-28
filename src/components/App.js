@@ -5,11 +5,15 @@ import './../styles/App.css';
 const App = () => {
   return (
     <div>
-      <Tooltip text="This is a tooltip">
-        <h2 className="tooltip">Hover over me</h2>
+      <Tooltip text="This is a tooltip for the first div">
+        <div className="tooltip-container">
+          <h2>Hover over this div</h2>
+        </div>
       </Tooltip>
-      <Tooltip text="This is another tooltip">
-        <p className="tooltip>Hover over me to see another tooltip</p>
+      <Tooltip text="This is another tooltip for the second div">
+        <div className="tooltip-container">
+          <p>Hover over this div to see another tooltip</p>
+        </div>
       </Tooltip>
     </div>
   );
