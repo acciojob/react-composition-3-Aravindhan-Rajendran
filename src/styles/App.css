@@ -1,4 +1,4 @@
-.tooltip-container {
+.tooltip {
   position: relative;
   display: inline-block;
 }
@@ -20,7 +20,7 @@
   transition: opacity 0.3s;
 }
 
-.tooltip-container:hover .tooltiptext {
+.tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
