@@ -1,9 +1,27 @@
-const Tooltip=()=>{
-  <tooltip title="This is a tooltip">
-  <button type="button">Hover over me
-  </tooltip>
-  <tooltip title="This is a another tooltip">
-  <button type="button">Hover over me to see another tooltip
-  </tooltip>
+import React, { useState } from "react";
+import './../styles/App.css';
 
+const Tooltip = ({ text, children }) => {
+  const [visible, setVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setVisible(false);
+  };
+
+  return (
+    <div 
+      className="tooltip-container" 
+      onMouseEnter={handleMouseEnter} 
+      onMouseLeave={handleMouseLeave}
+    >
+      {children}
+      {visible && <div className="tooltiptext">{text}</div>}
+    </div>
+  );
 }
+
+export default Tooltip;
