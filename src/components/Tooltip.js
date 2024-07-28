@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import './../styles/App.css';
+import './Tooltip.css'; // Ensure this imports your CSS
 
 const Tooltip = ({ text, children }) => {
   const [visible, setVisible] = useState(false);
 
-  const handleMouseEnter = () => {
-    setVisible(true);
-  };
-
-  const handleMouseLeave = () => {
-    setVisible(false);
-  };
+  const handleMouseEnter = () => setVisible(true);
+  const handleMouseLeave = () => setVisible(false);
 
   return (
     <div 
