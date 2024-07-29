@@ -5,11 +5,11 @@ import './../styles/App.css';
 const App = () => {
   return (
     <div>
-      <Tooltip text="This is a tooltip for the first div">
-        Hover over this div
+      <Tooltip tooltipId="firstTooltip" text="This is a tooltip for the first div">
+        <h2>Hover over this heading</h2>
       </Tooltip>
-      <Tooltip text="This is another tooltip for the second div">
-        Hover over this div to see another tooltip
+      <Tooltip tooltipId="secondTooltip" text="This is another tooltip for the second div">
+        <p>Hover over this paragraph to see another tooltip</p>
       </Tooltip>
     </div>
   );
